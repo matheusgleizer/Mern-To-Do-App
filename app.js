@@ -8,7 +8,11 @@ const path = require('path');
 
 //Initialize app and port
 const app = express();
-const PORT = process.env.PORT || 80;
+const port = process.env.PORT;
+
+if (port == null || port == "") {
+    port = 5050;
+}
 
 app.use(cors());
 
@@ -25,7 +29,7 @@ mongoose.connect(process.env.MONGO_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
-    .then(() => app.listen(PORT, () => console.log(`Server is listening on port: ${PORT}`)))
+    .then(() => app.listen(port, () => console.log(`Server is listening on port: ${PORT}`)))
     .catch(err => console.log(err));
 
 const db = mongoose.connection;
