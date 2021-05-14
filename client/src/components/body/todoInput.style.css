@@ -1,0 +1,12 @@
+form {
+    padding: 10px;
+}
+
+form input{
+    border-radius: 5px;
+    margin: 5px;
+}
+
+form button {
+    border-radius: 10px;
+}

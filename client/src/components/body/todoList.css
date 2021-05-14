@@ -1,0 +1,30 @@
+.body {
+    display: flex;
+}
+
+.todo-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+
+.todo-list li{
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 200px;
+    margin: 10px;
+    box-shadow: 2px 3px black;
+}
+
+.todo-list .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
