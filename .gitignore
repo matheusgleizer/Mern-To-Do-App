@@ -1,4 +1,4 @@
 **/.env
 **/node_modules
-**/build
-**/npm-error.log
+# **/build
+# **/npm-error.log
