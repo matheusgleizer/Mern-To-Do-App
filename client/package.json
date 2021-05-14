@@ -6,7 +6,6 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
-    "concurrently": "^6.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
@@ -17,9 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "client": "cd .. && cd server && nodemon",
-    "dev": "concurrently -n 'client, server' -c 'green,red' \"npm run start\" \"npm run client\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
