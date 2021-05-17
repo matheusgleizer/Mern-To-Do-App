@@ -9,7 +9,7 @@ export default function Main() {
 
   const fetchTodos = async () => {
     const req = await (
-      await fetch("http://localhost:5050/todo")
+      await fetch(`https://frozen-savannah-21687.herokuapp.com/todo`)
     )
       .json()
       .then((json) => setTodos(json.info))
