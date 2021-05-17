@@ -5,9 +5,12 @@ import { BsTrash } from "react-icons/bs";
 
 export default function TodoList({ todos, setTodos, fetchTodos }) {
   const handleDelete = async (id) => {
-    const deleted = await fetch(`http://localhost:5050/todo/delete/${id}`, {
-      method: "delete",
-    });
+    const deleted = await fetch(
+      `https://frozen-savannah-21687.herokuapp.com/todo/delete/${id}`,
+      {
+        method: "delete",
+      }
+    );
 
     // const filtered = todos.filter((item) => item._id !== id);
     // setTodos(filtered);
@@ -16,14 +19,17 @@ export default function TodoList({ todos, setTodos, fetchTodos }) {
 
   //Move Todo to On Going and vice versa
   const updateStatus = async (id, newStatus) => {
-    const updated = await fetch(`http://localhost:5050/todo/update`, {
-      method: "put",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        _id: id,
-        status: newStatus,
-      }),
-    });
+    const updated = await fetch(
+      `https://frozen-savannah-21687.herokuapp.com/todo/update`,
+      {
+        method: "put",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          _id: id,
+          status: newStatus,
+        }),
+      }
+    );
 
     fetchTodos();
   };

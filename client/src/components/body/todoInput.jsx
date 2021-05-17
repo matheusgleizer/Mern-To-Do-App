@@ -10,16 +10,19 @@ export default function ToDoInput({ todos, setTodos }) {
     var date = new Date();
     date = date.toDateString();
 
-    const req = await fetch("http://localhost:5050/todo/create", {
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        todo: toDo,
-        date: date,
-        description: description,
-        status: "todo",
-      }),
-    });
+    const req = await fetch(
+      "https://frozen-savannah-21687.herokuapp.com/todo/create",
+      {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          todo: toDo,
+          date: date,
+          description: description,
+          status: "todo",
+        }),
+      }
+    );
 
     const json = await req.json();
 
